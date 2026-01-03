@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Anastasia Arsentieva — Data Analyst</title>
+
+<style>
+:root{
+    --blue:#2f5f9e;
+    --gray:#6b6b6b;
+    --light:#f4f4f4;
+}
+body{
+    margin:0;
+    background:#bdbdbd;
+    font-family: Arial, sans-serif;
+}
+.page{
+    width:1100px;
+    min-height:1550px;
+    margin:40px auto;
+    background:white;
+    box-shadow:0 0 30px rgba(0,0,0,.35);
+    display:grid;
+    grid-template-columns:320px 1fr;
+}
+
+/* LEFT COLUMN */
+.sidebar{
+    background:var(--light);
+    padding:50px 35px;
+}
+.sidebar h3{
+    margin-top:40px;
+    font-size:18px;
+}
+.sidebar p{
+    font-size:14px;
+    color:var(--gray);
+    margin:6px 0;
+}
+
+/* MAIN */
+.main{
+    padding:60px 70px;
+}
+h1{
+    font-size:46px;
+    margin:0;
+}
+.subtitle{
+    color:var(--gray);
+    margin-top:8px;
+    font-size:20px;
+}
+.quote{
+    margin-top:30px;
+    font-style:italic;
+    color:#444;
+}
+section{
+    margin-top:70px;
+}
+section h2{
+    font-size:22px;
+    margin-bottom:20px;
+}
+
+/* TEXT HOVER */
+.text-short{font-weight:600}
+.text-more{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .4s ease;
+    color:#555;
+}
+.block:hover .text-more{
+    max-height:300px;
+}
+
+/* METRICS */
+.metrics{
+    display:flex;
+    gap:40px;
+    margin-top:30px;
+}
+.metric{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    background:var(--blue);
+    color:white;
+    font-size:28px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:grab;
+    user-select:none;
+}
+
+/* TIMELINE */
+.timeline{
+    border-left:3px solid var(--blue);
+    padding-left:25px;
+}
+.job{
+    margin-bottom:25px;
+}
+.job span{
+    color:var(--gray);
+}
+
+/* LANG */
+.lang{
+    position:fixed;
+    top:20px;
+    right:30px;
+}
+[data-lang]{display:none}
+[data-lang].active{display:block}
+</style>
+</head>
+
+<body>
+
+<div class="lang">
+    <button onclick="setLang('ru')">RU</button>
+    <button onclick="setLang('en')">EN</button>
+</div>
+
+<div class="page">
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+    <h3 data-lang="ru" class="active">Контакты</h3>
+    <h3 data-lang="en">Contacts</h3>
+
+    <p>Россия</p>
+    <p>Telegram: @AnastasiaArsentieva</p>
+    <p>Email: arsenteva_anastasiia@inbox.ru</p>
+
+    <h3 data-lang="ru" class="active">Навыки</h3>
+    <h3 data-lang="en">Skills</h3>
+
+    <p>Python / Pandas / NumPy</p>
+    <p>SQL</p>
+    <p>Excel / BI</p>
+    <p>ML / статистика</p>
+
+    <h3 data-lang="ru" class="active">Языки</h3>
+    <h3 data-lang="en">Languages</h3>
+
+    <p>English — B2</p>
+</aside>
+
+<!-- MAIN -->
+<main class="main">
+
+    <h1 data-lang="ru" class="active">Анастасия Арсентьева</h1>
+    <h1 data-lang="en">Anastasia Arsentieva</h1>
+
+    <div class="subtitle" data-lang="ru" class="active">Аналитик данных</div>
+    <div class="subtitle" data-lang="en">Data Analyst</div>
+
+    <div class="quote">«Делаю просто, быстро и эффективно»</div>
+
+    <!-- ABOUT -->
+    <section class="block">
+        <h2 data-lang="ru" class="active">Обо мне</h2>
+        <h2 data-lang="en">About</h2>
+
+        <div class="text-short" data-lang="ru" class="active">
+            Дрессировщица данных.
+        </div>
+        <div class="text-more" data-lang="ru" class="active">
+            Укрощаю хаос, структурирую данные, нахожу инсайты,
+            подкрепляю выводами и рекомендациями, автоматизирую аналитику.
+        </div>
+
+        <div class="text-short" data-lang="en">
+            Data tamer.
+        </div>
+        <div class="text-more" data-lang="en">
+            I structure chaos, extract insights, support decisions
+            with analytics and automation.
+        </div>
+    </section>
+
+    <!-- METRICS -->
+    <section>
+        <h2 data-lang="ru" class="active">Результаты</h2>
+        <h2 data-lang="en">Results</h2>
+
+        <div class="metrics">
+            <div class="metric">3000+</div>
+            <div class="metric">200+</div>
+            <div class="metric">15+</div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section>
+        <h2 data-lang="ru" class="active">Опыт</h2>
+        <h2 data-lang="en">Experience</h2>
+
+        <div class="timeline">
+            <div class="job">
+                <strong>Интерфакс / RUDATA</strong><br>
+                <span>Аналитик данных</span>
+            </div>
+            <div class="job">
+                <strong>4 Service</strong><br>
+                <span>Аналитик</span>
+            </div>
+            <div class="job">
+                <strong>Сибакадембанк / УрсаБанк</strong><br>
+                <span>Руководитель МСБ</span>
+            </div>
+            <div class="job">
+                <strong>БКС</strong><br>
+                <span>Инвестиционный аналитик</span>
+            </div>
+        </div>
+    </section>
+
+</main>
+</div>
+
+<script>
+function setLang(l){
+    document.querySelectorAll('[data-lang]').forEach(e=>{
+        e.classList.toggle('active', e.dataset.lang===l)
+    })
+}
+document.querySelectorAll('.metric').forEach(el=>{
+    let d=false,x,y,r=0
+    el.onmousedown=e=>{d=true;x=e.clientX-el.offsetLeft;y=e.clientY-el.offsetTop}
+    document.onmouseup=()=>d=false
+    document.onmousemove=e=>{
+        if(!d)return
+        el.style.position='relative'
+        el.style.left=e.clientX-x+'px'
+        el.style.top=e.clientY-y+'px'
+    }
+    el.onwheel=e=>{
+        e.preventDefault()
+        r+=e.deltaY>0?5:-5
+        el.style.transform=`rotate(${r}deg)`
+    }
+})
+</script>
+
+</body>
+</html>
+
+
+
